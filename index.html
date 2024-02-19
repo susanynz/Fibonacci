@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial</title>
-    <script async defer src="/factorial.js"></script>
+    <title>Fibonacci</title>
+    <script async defer src="/fibonacci.js"></script>
 </head>
 <body>
     <div style="text-align: center;">
-    <h1>FACTORIAL</h1>
-    <p>El factorial es una operación matemática que se denota con el símbolo "!". 
-        <br>
-    El factorial de un número entero positivo "n" se define como el producto de todos los números enteros positivos desde 1 hasta "n". 
+    <h1>FIBONACCI</h1>
+    La sucesión de Fibonacci es una secuencia matemática infinita de números naturales que comienza con 0 y 1,
     <br>
-    El factorial de "n" se representa como "n!" y se calcula de la siguiente manera:
+     y cada término siguiente es la suma de los dos anteriores. 
+     <br>
+     La secuencia se denota comúnmente como 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, y así sucesivamente. 
+     <br>Formalmente, la relación de recurrencia que define la secuencia de Fibonacci es: F(n)=F(n−1)+F(n−2)
+     donde donde F(n) es el n-ésimo término de la secuencia. 
+     <br>
+     La secuencia de Fibonacci tiene numerosas propiedades y aparece en diversas áreas de las matemáticas y la naturaleza. 
+     <br>
+     Algunas personas sugieren que la secuencia de Fibonacci se puede encontrar en patrones y estructuras presentes en la naturaleza, como conchas, flores, y otros elementos biológicos, 
+     <br>lo que ha llevado a asociaciones simbólicas con la armonía y la belleza de la naturaleza. Algunos consideran que estos patrones reflejan un diseño o una inteligencia superior en el universo.
+    <br>
+    <br>
+    
+    <form id="fibonacciForm" onsubmit="event.preventDefault(); calcularFibonacci();">
+        <label for="numeroInput">Ingrese un número</label>
+        <input type="text" id="numeroInput" name="numeroInput">
+        <button type="submit">Fibonacci</button>
+    </form>
 
-        n!=n×(n−1)×(n−2)×…×3×2×1</p>
-        
-  <form id="factorialForm">
-    <label for="numeroInput">Ingrese un número para calcular su factorial</label>
-    <input type="text" id="numeroInput" name="numeroInput">
-    <button type="submit">Calcular Factorial</button>
-  </form>
+    <div id="resultado"></div>
 
     </div>
 
